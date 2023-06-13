@@ -10,23 +10,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        // actions: [
-        //   Container(
-        //     decoration: const BoxDecoration(color: Colors.transparent),
-        //     child: IconButton(
-        //       icon: const Icon(Icons.menu),
-        //       onPressed: () {},
-        //     ),
-        //   )
-        // ],
         leadingWidth: 24,
         title: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: const Color.fromARGB(255, 241, 231, 231)),
-          child: TextField(
+          child: const TextField(
             decoration: InputDecoration(
               prefixIcon: Icon(Icons.search),
               hintText: 'Search......',

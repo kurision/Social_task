@@ -13,10 +13,11 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Profile",
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 25, color: Colors.black),
@@ -28,7 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const SizedBox(
-            height: 50,
+            height: 10,
           ),
           Card(
             color: Colors.grey.shade100,
@@ -82,6 +83,26 @@ class _ProfilePageState extends State<ProfilePage> {
                   ]),
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.settings,
+                    size: 60,
+                  )),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.logout,
+                    size: 60,
+                  ))
+            ],
+          )
         ],
       )),
     );
